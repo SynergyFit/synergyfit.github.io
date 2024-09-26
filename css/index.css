@@ -161,7 +161,7 @@ section {
 .plan > img:hover {
     transition: 0.3s;
     transform: translateY(-10px);
-    filter: drop-shadow(3px 3px 3px rgb(129, 129, 129));
+    filter: drop-shadow(3px 5px 3px rgb(129, 129, 129));
 }
 
 .preço {
@@ -220,10 +220,10 @@ footer > nav > a {
         margin: 0px 10px;
     }
     #logo {
-        width: 38px;
+        width: 41px;
     }
     #marca {
-        font-size: 0.5em;
+        font-size: 0.8em;
     }
     #raio {
         display: none;
