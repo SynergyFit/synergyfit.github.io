@@ -177,17 +177,17 @@ input {
         height: 100px;
     }
     a.link-nav {
-        font-size: 0.9em;
+        font-size: 0.4em;
         margin: 0px 16px;
     }
     #logo {
-        width: 80px;
+        width: 35px;
     }
     #marca {
-        font-size: 1em;
+        font-size: 0.8em;
     }
     #titulo{
-        font-size: 1.7em;
+        font-size: 0.8em;
     }
     form {
         width: 390px;
