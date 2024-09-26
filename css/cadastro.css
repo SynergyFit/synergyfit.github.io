@@ -128,17 +128,17 @@ input {
         height: 70px;
     }
     a.link-nav {
-        font-size: 0.7em;
+        font-size: 0.5em;
         margin: 0px 10px;
     }
     #logo {
-        width: 50px;
+        width: 35px;
     }
     #marca {
         font-size: 1em;
     }
     #titulo{
-        font-size: 1.0em;
+        font-size: 0.8em;
     }
     form {
         width: 350px;
