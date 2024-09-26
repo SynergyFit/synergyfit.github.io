@@ -52,7 +52,7 @@ a.link-nav:hover {
 
 .menu{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin-right: 30px;
     flex-grow: 1; /* itens crescerem igualmente dentro daquele espaço */
@@ -71,11 +71,9 @@ span{
 form {
     display: flex;
     flex-direction: column;
-    background-color:#AFA4BA ;
     padding: 10px;
     margin: auto;
     border-radius: 20px;
-    box-shadow: 4px 4px 3px #AFA4BA;
 }
 
 .campo {
@@ -105,11 +103,11 @@ input[type='checkbox'] {
     background-color:#EB671B;
     border: 1px solid;
     width: 90px;
-    margin: 15px auto 0px auto;
+    margin: 5px auto 0px auto;
     border-radius: 8px;
 }
 #botao:hover {
-    background-color: ;
+    background-color: #ff5e00;
     transition: 0.3s;
     transform: translateY(-4px);
     box-shadow: 2px 2px 3px rgb(110, 110, 110);
@@ -120,20 +118,15 @@ input[type='checkbox'] {
     transform: translateY(3px);
 }
 
-#senha{
-    font-size: 7px;
-     color: black;
-     display: flex;
+#esqueci{
+    text-align: center;
+    font-size: 0.8em;
+    color: black;
      
 }
 
 input {
     border-radius: 15px;
-}
-
-input::placeholder {
-    font-size: 1.2em;
-    text-align: center;
 }
 
 #resposta {

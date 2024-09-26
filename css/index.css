@@ -187,6 +187,9 @@ section {
         font-size: 0.7em;
         margin: 0px 10px;
     }
+    #raio {
+        width: 70px;
+    }
     #logo {
         width: 36px;
     }
@@ -233,6 +236,9 @@ section {
         font-size: 1.2em;
         margin: 0px 16px;
     }
+    #raio {
+        width: 90px;
+    }
     #logo {
         width: 100px;
     }
@@ -278,6 +284,9 @@ section {
         font-size: 1.5em;
         margin: 0px 20px;
     }
+    #raio {
+        width: 110px;
+    }
     #logo {
         width: 115px;
     }
@@ -321,6 +330,9 @@ section {
     a.link-nav {
         font-size: 1.7em;
         margin: 0px 30px;
+    }
+    #raio {
+        width: 125px;
     }
     #logo {
         width: 125px;
