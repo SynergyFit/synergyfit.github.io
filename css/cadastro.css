@@ -128,7 +128,7 @@ input {
         height: 70px;
     }
     a.link-nav {
-        font-size: 1em;
+        font-size: 0.7em;
         margin: 0px 10px;
     }
     #logo {
@@ -158,7 +158,7 @@ input {
         height: 100px;
     }
     a.link-nav {
-        font-size: 1.2em;
+        font-size: 0.9em;
         margin: 0px 16px;
     }
     #logo {
@@ -189,7 +189,7 @@ input {
         height: 120px;
     }
     a.link-nav {
-        font-size: 1.5em;
+        font-size: 1.2em;
         margin: 0px 20px;
     }
     #logo {
