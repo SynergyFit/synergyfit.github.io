@@ -82,5 +82,4 @@ async function cadastro() {
 
 }
 
-// Adiciona o evento de clique ao botão
 document.getElementById('botao').addEventListener('click', cadastro);
