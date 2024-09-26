@@ -180,6 +180,32 @@ section {
     font-size:18px ;
 }
 
+/*footer*/
+footer {
+    margin-top: 20px;
+    padding-top:10px;
+    background-color: #2b2b2b;
+    width: 100%;
+}
+
+footer > p {
+    text-align: center;
+    color: white;
+}
+
+footer > nav {
+    text-align:center;
+}
+
+footer > nav > a {
+    color: white;
+    margin: 0px 10px;
+}
+#div_icones {
+    justify-content: center;
+    display: flex;
+}
+
 
 /*Celular*/
 @media(min-width:320px) and (max-width:500px) {
@@ -229,7 +255,14 @@ section {
     .plan {
         margin: 20px 10px;
     }
-
+    footer {
+        height: 160px;
+    }
+    .icone {
+        width: 30px;
+        margin: 15px 10px 0px 10px;
+    }
+    
 
 }
 
@@ -280,7 +313,13 @@ section {
     .plan {
         margin: 25px 15px;
     }
-
+    footer {
+        height: 165px;
+    }
+    .icone {
+        width: 35px;
+        margin: 17px 13px 0px 13px;
+    }
 
 }
 
@@ -329,6 +368,13 @@ section {
 
     .plan {
         margin: 0px 15px;
+    }
+    footer {
+        height: 185px;
+    }
+    .icone {
+        width: 40px;
+        margin: 12px 15px 0px 15px;
     }
 
 }
@@ -381,6 +427,12 @@ section {
     .plan {
         margin: 0px 25px;
     }
-
+    footer {
+        height: 190px;
+    }
+    .icone {
+        width: 50px;
+        margin: 15px 17px 0px 17px;
+    }
 
 }

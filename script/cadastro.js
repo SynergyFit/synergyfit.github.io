@@ -1,8 +1,6 @@
 const url = "https://go-wash-api.onrender.com/api/user";
 
-async function cadastro(event) {
-    // Evita o envio do formulário
-    event.preventDefault();
+async function cadastro() {
 
     // Obtém os valores dos inputs
     const nome = document.getElementById('nome').value;
@@ -52,37 +50,35 @@ async function cadastro(event) {
         return;
     }
 
-    // Se tudo estiver correto
-    resposta.style.color = 'green'
-    resposta.textContent = "Cadastro realizado com sucesso!";
-
     // Api
 
-    let api = await fetch(url,{
-        method:"POST",
-        body:JSON.stringify({
+    let api = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify({
             "name":nome,
             "email":email,
             "user_type_id":1,
-            "password": senha,
-            "cpf_cnpj": cpfCnpj,
-            "terms": 1,
-            "birthday":dataNascimento    
+            "password":senha,
+            "cpf_cnpj":cpfCnpj,
+            "terms":1,
+            "birthday":dataNascimento
         }),
-        headers:{
-            'Content-Type':'application/json'
+        headers: {
+            'Content-Type': 'application/json'
         }
     });
 
-    if(api.ok) {
-        let resposta = await api.json();
-        alert('Usuario cadastrado')
-        console.log(resposta);
-        return;
-    }
+    if (api.ok) {
+       resposta.style.color = 'green'
+        resposta.textContent = "Cadastro realizado com sucesso!";
+        return; 
+    } 
 
     let respostaErro = await api.json();
-    alert(respostaErro.data.errors.cpf_cnpj)
+    console.log(resposta);
+
+    resposta.style.color = 'red'
+    resposta.textContent = "Erro no cadastro :(";
 
 }
 
