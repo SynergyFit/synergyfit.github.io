@@ -118,12 +118,15 @@ input {
 
 /*Celular*/
 @media(min-width:320px) and (max-width:500px) {
+    header {
+        height: 70px;
+    }
     a.link-nav {
         font-size: 0.7em;
         margin: 0px 10px;
     }
     #logo {
-        width: 36px;
+        width: 35px;
     }
     #marca {
         font-size: 0.9em;
@@ -145,15 +148,18 @@ input {
 
 /*Tablet*/
 @media(min-width:501px) and (max-width:767px) {
+    header {
+        height: 100px;
+    }
     a.link-nav {
-        font-size: 1.2em;
+        font-size: 0.7em;
         margin: 0px 16px;
     }
     #logo {
-        width: 100px;
+        width: 80px;
     }
     #marca {
-        font-size: 1.2em;
+        font-size: 1em;
     }
     #titulo{
         font-size: 1.2em;
@@ -173,15 +179,18 @@ input {
 
 /*Desktop menor*/
 @media(min-width:767px) and (max-width:1440px) {
+    header {
+        height: 120px;
+    }
     a.link-nav {
         font-size: 1.5em;
         margin: 0px 20px;
     }
     #logo {
-        width: 115px;
+        width: 105px;
     }
     #marca {
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
     #titulo{
         font-size: 1.9em;
@@ -202,15 +211,21 @@ input {
 
 /*Desktop maior*/
 @media(min-width:1441px){
+    header {
+        height: 120px;
+    }
     a.link-nav {
-        font-size: 1.7em;
-        margin: 0px 30px;
+        font-size: 1.5em;
+        margin: 0px 20px;
     }
     #logo {
-        width: 125px;
+        width: 105px;
     }
     #marca {
-        font-size: 2em;
+        font-size: 1.3em;
+    }
+    #proxima {
+        font-size: 2.2em;
     }
     #titulo{
         font-size: 1.6em;

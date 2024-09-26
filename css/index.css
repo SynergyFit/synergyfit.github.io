@@ -183,18 +183,21 @@ section {
 
 /*Celular*/
 @media(min-width:320px) and (max-width:500px) {
+    header {
+        height: 70px;
+    }
     a.link-nav {
         font-size: 0.7em;
         margin: 0px 10px;
     }
-    #raio {
-        width: 70px;
-    }
     #logo {
-        width: 36px;
+        width: 35px;
     }
     #marca {
         font-size: 0.9em;
+    }
+    #raio {
+        width: 70px;
     }
     #proxima {
         font-size: 1.1em;
@@ -232,18 +235,21 @@ section {
 
 /*Tablet*/
 @media(min-width:501px) and (max-width:767px) {
+    header {
+        height: 100px;
+    }
     a.link-nav {
-        font-size: 1.2em;
+        font-size: 0.7em;
         margin: 0px 16px;
+    }
+    #logo {
+        width: 80px;
+    }
+    #marca {
+        font-size: 1em;
     }
     #raio {
         width: 90px;
-    }
-    #logo {
-        width: 100px;
-    }
-    #marca {
-        font-size: 1.2em;
     }
     #proxima {
         font-size: 1.5em;
@@ -280,18 +286,21 @@ section {
 
 /*Desktop menor*/
 @media(min-width:767px) and (max-width:1440px) {
+    header {
+        height: 120px;
+    }
     a.link-nav {
         font-size: 1.5em;
         margin: 0px 20px;
     }
-    #raio {
-        width: 110px;
-    }
     #logo {
-        width: 115px;
+        width: 105px;
     }
     #marca {
-        font-size: 1.5em;
+        font-size: 1.3em;
+    }
+    #raio {
+        width: 110px;
     }
     #proxima {
         font-size: 1.7em;
@@ -327,18 +336,21 @@ section {
 
 /*Desktop maior*/
 @media(min-width:1441px){
+    header {
+        height: 130px;
+    }
     a.link-nav {
-        font-size: 1.7em;
+        font-size: 1.6em;
         margin: 0px 30px;
     }
-    #raio {
-        width: 125px;
-    }
     #logo {
-        width: 125px;
+        width: 105px;
     }
     #marca {
-        font-size: 2em;
+        font-size: 1.7em;
+    }
+    #raio {
+        width: 105px;
     }
     #proxima {
         font-size: 2.2em;
