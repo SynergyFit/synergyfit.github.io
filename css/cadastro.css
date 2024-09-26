@@ -80,8 +80,7 @@ span{
 }
 #titulo {
     text-align: center;
-    
-    
+    margin: 25px 0px 25px 0px;
 }
 label {
     display: block;
