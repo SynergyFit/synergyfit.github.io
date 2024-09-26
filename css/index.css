@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
 * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
+
 
 body{
     background-color: white;
@@ -72,7 +73,10 @@ a.link-nav:hover {
     margin-right: 30px;
     flex-grow: 1; /* itens crescerem igualmente dentro daquele espaço */
     padding: 10px;
-    font-size: 12px;
+    font-size: 14px;
+}
+#marca{
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #planos {
@@ -86,9 +90,11 @@ a.link-nav:hover {
 
 #planos_synergyfit{
     color: #FF6600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #titulo_planos{
     color: #470e75;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #input_index {
@@ -132,23 +138,8 @@ span{
     color:#470E75 ;
 }
 
-.plan{
-    width: 80%;
-    margin: 0px 20px;
-    padding: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-radius: 10px;
-    border: 2px solid #412261;
-    box-shadow: 0 0 0 black;
-    text-indent: 15px; /* paragrafo*/
 
-}
 
-.plan:hover {
-    transition: 0.3s;
-    transform: translateY(-5px);
-    box-shadow: 3px 3px 3px rgba(104, 104, 104, 0.74)
-}
 
 section {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -160,6 +151,13 @@ section {
     padding: 20px;
     
 }
+
+.plan{
+    
+text-align: center;
+  
+}
+
 
 
 .preço {
@@ -182,9 +180,9 @@ section {
 
 /*footer*/
 footer {
-    margin-top: 20px;
-    padding-top:10px;
-    background-color: #2b2b2b;
+    margin-top: 10px;
+    padding-top:20px;
+    background-color: black;
     width: 100%;
 }
 
@@ -195,6 +193,7 @@ footer > p {
 
 footer > nav {
     text-align:center;
+    
 }
 
 footer > nav > a {
@@ -213,17 +212,17 @@ footer > nav > a {
         height: 70px;
     }
     a.link-nav {
-        font-size: 0.6em;
+        font-size: 0.8em;
         margin: 0px 10px;
     }
     #logo {
-        width: 35px;
+        width: 38px;
     }
     #marca {
         font-size: 0.6em;
     }
     #raio {
-        width: 52px;
+        width: 50px;
     }
     #proxima {
         font-size: 1.1em;
@@ -253,15 +252,18 @@ footer > nav > a {
     }
 
     .plan {
-        margin: 20px 10px;
+        width: 150px;
+       
     }
     footer {
-        height: 160px;
+        height: 140px;
     }
     .icone {
         width: 30px;
         margin: 15px 10px 0px 10px;
     }
+
+
     
 
 }
@@ -272,17 +274,17 @@ footer > nav > a {
         height: 100px;
     }
     a.link-nav {
-        font-size: 0.7em;
+        font-size: 0.8em;
         margin: 0px 16px;
     }
     #logo {
-        width: 80px;
+        width: 70px;
     }
     #marca {
-        font-size: 1em;
+        font-size: 0.7em;
     }
     #raio {
-        width: 90px;
+        width: 60px;
     }
     #proxima {
         font-size: 1.5em;
@@ -311,7 +313,7 @@ footer > nav > a {
     }
 
     .plan {
-        margin: 25px 15px;
+        width:300px;
     }
     footer {
         height: 165px;
@@ -329,17 +331,17 @@ footer > nav > a {
         height: 120px;
     }
     a.link-nav {
-        font-size: 1.5em;
+        font-size: 1em;
         margin: 0px 20px;
     }
     #logo {
-        width: 105px;
+        width: 100px;
     }
     #marca {
-        font-size: 1.3em;
+        font-size: 1em;
     }
     #raio {
-        width: 110px;
+        width: 90px;
     }
     #proxima {
         font-size: 1.7em;
@@ -367,7 +369,7 @@ footer > nav > a {
     }
 
     .plan {
-        margin: 0px 15px;
+        width: 500px;
     }
     footer {
         height: 185px;
