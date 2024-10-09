@@ -101,7 +101,7 @@ a.link-nav:hover {
     border-radius: 20px;
     padding: 10px;
     border: 1px solid black;
-    font-size: 16px;
+    font-size: 17px;
     padding-left: 40px;
     
 }
@@ -153,16 +153,20 @@ section {
     
 }
 
-.plan > img {
+.plan{
     margin: 10px auto 10px auto;
+
 }
 
-
-.plan > img:hover {
-    transition: 0.3s;
-    transform: translateY(-10px);
-    filter: drop-shadow(3px 5px 3px rgb(129, 129, 129));
+#bronze{
+    border: 2px solid black;
+    border-radius: 10px;
 }
+#prata{
+    border: 2px solid black;
+    border
+}
+
 
 .preço {
     padding: 15px;

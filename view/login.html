@@ -25,25 +25,30 @@
     </header> 
 
     <main>
-        <h1 id="titulo">Área do aluno</h1>
-        <p id="login">Se você ja for aluno, faça seu login!</p>
+        <h1 id="titulo">Área do aluno<br><img src="../img/icone user.png" width="70px"></h1>
+
+
+       
+        <p id="login">Se você ja for aluno, <span>faça seu login!</span></p>
 
         <form>
+        
+            
 
-            <div class="campo">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" placeholder="Digite seu email">
+        
+                    <div class="campo">
+                        <label for="email">Email</label>
+                       <img src="../img/icone_email.png" width="25px">  <input type="text" name="email" id="email" placeholder="Digite seu email">
+                    </div>
+                    <div class="campo">
+                        <label for="senha">Senha</label>
+                        <img src="../img/icone chave.png" width="25px"> <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                    </div>
+                    <a href="#" id="esqueci">Esqueci minha senha</a>
+                    <input type="button" value="Entrar" id="botao">
+                    <p id="resposta"></p>
+                </div>
             </div>
-
-            <div class="campo">
-                <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
-            </div>
-
-            <a href="#" id="esqueci">Esqueci minha senha</a>
-            <input type="button" value="Entrar" id="botao">
-
-            <p id="resposta"></p>
 
         </form>
 

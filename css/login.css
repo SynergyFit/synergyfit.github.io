@@ -5,10 +5,13 @@
 }
 
 body{
+   
     background-color: white;
     margin: 0;
     overflow-x: hidden;
 }
+
+
 
 #clicado {
     background-color:#412261 ;
@@ -67,8 +70,12 @@ a.link-nav:hover {
     color: #412261;
 }
 
+#user{
+    text-align: center;
+}
+
 span{
-    color: #EB671B;
+    color: ;
 }
 
 #span-fit{
@@ -78,11 +85,11 @@ span{
 form {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 40px;
     margin: auto;
     border-radius: 20px;
-    box-shadow: 0px 1px 2px black;
-    background-color: #F2CAA7;
+    box-shadow: 0px 2px 3px #412261;
+    background-color: ;
 }
 
 .campo {
@@ -90,7 +97,7 @@ form {
 }
 
 span{
-    color: #EB671B;
+    color:darkorange ;
 }
 #titulo {
     text-align: center;
@@ -109,8 +116,8 @@ input[type='checkbox'] {
 }
 #botao {
     color: white;
-    background-color:#EB671B;
-    border: 1px solid;
+    background-color:chocolate;
+    border: 2px solid;
     width: 100px;
     height: 30px;
     margin: 5px auto 0px auto;
