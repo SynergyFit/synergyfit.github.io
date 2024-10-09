@@ -12,7 +12,7 @@ async function cadastro() {
     const termos = document.getElementById('terms').checked;
 
     // Exemplo de como usar os valores obtidos
-    const resposta = document.getElementById('resposta');
+    let resposta = document.getElementById('resposta');
     
     // Verifica se todos os campos estão preenchidos
     if (!nome || !email || !cpfCnpj || !dataNascimento || !senha || !confirmarSenha) {
@@ -44,7 +44,8 @@ async function cadastro() {
         resposta.style.color = 'red'
         resposta.textContent = "As senhas não conferem!";
         return;
-    } else if (!termos) {
+    } 
+    if (!termos) {
         resposta.style.color = 'red'
         resposta.textContent = "Você precisa aceitar os termos!";
         return;
@@ -60,7 +61,7 @@ async function cadastro() {
             "user_type_id":1,
             "password":senha,
             "cpf_cnpj":cpfCnpj,
-            "terms":1,
+            "terms":termos,
             "birthday":dataNascimento
         }),
         headers: {
@@ -69,13 +70,39 @@ async function cadastro() {
     });
 
     if (api.ok) {
-       resposta.style.color = 'green'
+        resposta.style.color = 'green'
         resposta.textContent = "Cadastro realizado com sucesso!";
+        console.log(`Cadastrado com sucesso: ${nome}`)
         return; 
     } 
 
     let respostaErro = await api.json();
-    console.log(resposta);
+
+
+    console.log(respostaErro)
+
+    if(respostaErro.data.errors == 'cpf_cnpj invalid') {
+        resposta.innerHTML = 'CPF/CNPJ Inválido :(';
+        resposta.style.color = 'red';
+        return;
+    }
+
+    try {
+        if(respostaErro.data.errors.email[0] == 'The email has already been taken.') {
+            resposta.innerHTML = 'Email já utilizado :(';
+            resposta.style.color = 'red';
+            return;
+        }
+    
+    } catch {
+        //nada acontece//
+    }
+    
+    if(respostaErro.data.errors.cpf_cnpj[0] == 'The cpf cnpj has already been taken.') {
+        resposta.innerHTML = 'CPF/CNPJ já utilizado :(';
+        resposta.style.color = 'red';
+        return;
+    } 
 
     resposta.style.color = 'red'
     resposta.textContent = "Erro no cadastro :(";
