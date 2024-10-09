@@ -173,7 +173,7 @@ input {
         font-size: 1.6em;
     }
     form {
-        width: 350px;
+        width: 65%;
     }
     input[type='text'], input[type='date'], input[type='password'] {
         width: 150px;
@@ -199,7 +199,7 @@ input {
         font-size: 0.8em;
     }
     form {
-        width: 390px;
+        width: 70%;
     }
     input[type='text'], input[type='date'], input[type='password'] {
         width: 200px;
@@ -226,7 +226,7 @@ input {
         font-size: 1.9em;
     }
     form {
-        width: 470px;
+        width: 65%;
     }
     input[type='text'], input[type='date'], input[type='password'] {
         width: 230px;
@@ -257,7 +257,7 @@ input {
         font-size: 2.5em;
     }
     form {
-        width: 650px;
+        width: 40%;
     }
     input[type='text'], input[type='date'], input[type='password'] {
         width: 250px;
