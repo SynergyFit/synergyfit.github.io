@@ -29,8 +29,6 @@ nav{
 #links{
     list-style: none;
     display: flex;
-    gap: 25px;
-
 }
 
 #links > li{
@@ -177,6 +175,9 @@ footer > p {
     #icons {
         display: none;
     }
+    #links {
+        gap: 20px;
+    }
     #links > li > a {
         font-size: 0.8em;
     }
@@ -203,6 +204,9 @@ footer > p {
 @media(min-width:501px) and (max-width:767px) {
     #icons {
         display: none;
+    }
+    #links {
+        gap: 50px;
     }
     #links > li > a {
         font-size: 0.8em;
@@ -231,11 +235,15 @@ footer > p {
     #icons {
         display: flex;
     }
+    
     #icons > a {
         font-size: 0.8em;
     }
     #links > li > a {
         font-size: 1em;
+    }
+    #links {
+        gap: 65px;
     }
     section > p {
         width: 65%;
@@ -264,6 +272,9 @@ footer > p {
     }
     #icons > a {
         font-size: 0.9em;
+    }
+    #links {
+        gap: 80px;
     }
     #links > li > a {
         font-size: 1.1em;

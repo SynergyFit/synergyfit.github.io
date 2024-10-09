@@ -6,6 +6,12 @@ async function login() {
     let senha = document.getElementById('senha').value
     let resultado = document.getElementById('resposta')
 
+    if (!email || !senha) {
+        resultado.innerHTML = 'Campos obrigatórios!'
+        resultado.style.color = 'red'
+        return
+    }
+
     let api = await fetch(url, {
         method: "POST",
         body: JSON.stringify({
