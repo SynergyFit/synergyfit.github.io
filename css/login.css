@@ -74,8 +74,9 @@ a.link-nav:hover {
     text-align: center;
 }
 
-span{
-    color: ;
+.icones {
+    position: relative;
+    bottom: -7px;
 }
 
 #span-fit{
@@ -89,7 +90,7 @@ form {
     margin: auto;
     border-radius: 20px;
     box-shadow: 0px 2px 3px #412261;
-    background-color: ;
+    background-color: white;
 }
 
 .campo {
