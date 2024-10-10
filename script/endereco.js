@@ -56,6 +56,7 @@ async function cadastroEndereco() {
         resultado.style.color = 'green'
         console.log(resposta)
         localStorage.setItem('endereco', JSON.stringify(resposta))
+        setTimeout(() => window.location.href = 'home.html', 3000)
         return
     }
     let respostaErro = await api.json();

@@ -177,11 +177,6 @@ section {
     font-size: 18px;
 }
 
-
-#logo{
-    width: 20px;
-}
-
 #premium{
     font-size:18px ;
 }
@@ -230,7 +225,7 @@ footer > nav > a {
         margin: 0px 10px;
     }
     #logo {
-        width: 41px;
+        width: 110px;
     }
     #marca {
         font-size: 0.8em;
@@ -294,7 +289,7 @@ footer > nav > a {
         margin: 0px 16px;
     }
     #logo {
-        width: 70px;
+        width: 120px;
     }
     #marca {
         font-size: 0.6em;
@@ -353,7 +348,7 @@ footer > nav > a {
         margin: 0px 20px;
     }
     #logo {
-        width: 100px;
+        width: 135px;
     }
     #marca {
         font-size: 1em;
@@ -411,7 +406,7 @@ footer > nav > a {
         margin: 0px 30px;
     }
     #logo {
-        width: 105px;
+        width: 145px;
     }
     #marca {
         font-size: 1.7em;
