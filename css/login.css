@@ -98,7 +98,7 @@ form {
 }
 
 span{
-    color:darkorange ;
+    color:#FF6600 ;
 }
 #titulo {
     text-align: center;
@@ -117,7 +117,7 @@ input[type='checkbox'] {
 }
 #botao {
     color: white;
-    background-color:chocolate;
+    background-color:#FF6600;
     border: 2px solid;
     width: 100px;
     height: 30px;

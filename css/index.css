@@ -89,11 +89,11 @@ a.link-nav:hover {
 }
 
 #planos_synergyfit{
-    color: #FF6600;
+    color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #titulo_planos{
-    color: #470e75;
+    color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -118,7 +118,7 @@ a.link-nav:hover {
     margin-top: 20px;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #470E75;
+    color: black;
          
 }
 
@@ -130,7 +130,7 @@ a.link-nav:hover {
 
 
 span{
-    color: #FF6600;
+    color:#FF6600 ;
     
 
 }
@@ -179,11 +179,17 @@ section {
 
 
 #logo{
-    width: 250px;
+    width: 20px;
 }
 
 #premium{
     font-size:18px ;
+}
+
+.funcionamento{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 /*footer*/
