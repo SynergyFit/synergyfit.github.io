@@ -93,12 +93,28 @@ form {
     background-color: white;
 }
 
+#informacoes_logado {
+    padding: 10px;
+    border-radius: 5%;
+    display: none;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(236, 236, 236, 0.658);
+    box-shadow: 0px 2px 3px #412261;
+}
+
+#informacoes_logado > p {
+    color: #7335b1;
+    text-shadow: 0.5px 0.5px 1px #4b22749f;
+    text-decoration: underline;
+}
+
 .campo {
     margin: 10px auto;
 }
 
 span{
-    color:#FF6600 ;
+    color:darkorange ;
 }
 #titulo {
     text-align: center;
@@ -117,7 +133,7 @@ input[type='checkbox'] {
 }
 #botao {
     color: white;
-    background-color:#FF6600;
+    background-color:chocolate;
     border: 2px solid;
     width: 100px;
     height: 30px;
@@ -152,6 +168,20 @@ input {
     text-align: center;
 }
 
+#deslogar {
+    display: none;
+    text-align: center;
+}
+
+#deslogar:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#deslogar:active {
+    color: #7335b1;
+}
+
 
 
 /*Celular*/
@@ -170,14 +200,19 @@ input {
         font-size: 0.8em;
     }
     #titulo{
-        font-size: 1.6em;
+        font-size: 1.5em;
     }
-    form {
+    form, #informacoes_logado {
         width: 65%;
     }
     input[type='text'], input[type='date'], input[type='password'] {
         width: 150px;
     }
+
+    #informacoes_logado > p {
+        font-size: 1.2em;
+    }
+    
 }
 
 /*Tablet*/
@@ -196,14 +231,17 @@ input {
         font-size: 0.8em;
     }
     #titulo{
-        font-size: 0.8em;
+        font-size: 1.6em;
     }
-    form {
+    form, #informacoes_logado {
         width: 70%;
     }
     input[type='text'], input[type='date'], input[type='password'] {
         width: 200px;
         height: 25px;
+    }
+    #informacoes_logado > p {
+        font-size: 1.3em;
     }
 }
 
@@ -225,12 +263,15 @@ input {
     #titulo{
         font-size: 1.9em;
     }
-    form {
+    form, #informacoes_logado {
         width: 65%;
     }
     input[type='text'], input[type='date'], input[type='password'] {
         width: 230px;
         height: 25px;
+    }
+    #informacoes_logado > p {
+        font-size: 1.4em;
     }
 }
 
@@ -256,12 +297,15 @@ input {
     #titulo{
         font-size: 2.5em;
     }
-    form {
+    form, #informacoes_logado {
         width: 40%;
     }
     input[type='text'], input[type='date'], input[type='password'] {
         width: 250px;
         height: 25px;
+    }
+    #informacoes_logado > p {
+        font-size: 1.6em;
     }
 
 }

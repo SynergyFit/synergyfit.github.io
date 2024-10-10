@@ -11,81 +11,83 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="../img/menu home.jpeg" width="50px">
+                <img src="../img/menu home.jpeg" width="40px">
             </div>
 
             <ul class="links">
-                <li><a href="" id="a">Meu endereço</a></li>
-                <li><a href="../index.html" id="b">Página Principal</a></li>
-                <li><a href="home.html" id="c">Home</a></li>
+                <li><a href="">Meu endereço</a></li>
+                <li><a href="../index.html">Página Principal</a></li>
+                <li><a href="home.html">Home</a></li>
             </ul>
 
         </nav>
        
     </header>
 
-    <div class="cada">
+    <div id="cada">
         <h1>Cadastro de endereço <br><span>Synergyfit</span></h1>
-        <p>Agora, faça seu cadastro de endereço!</p>
+        <p class="paragrafos" id="paragrafo"></p>
     </div>
-<main>
+
+    <main>
+
+        <div id="deslogado">
+            <div style="text-align: center;">
+                <img src="../img/icone user roxo.png">
+            </div>
+            <p class="paragrafos" id="paragrafo_2"></p>
+        </div>
     
-        <form>
-    
+        <form id="form">
+
             <div class="campo">
                 <label for="title">Titulo</label>
                 <input type="text" name="casa" id="titulo" placeholder="Digite o titulo">
             </div>
-    
+
             <div class="campo">
                 <label for="cep">Cep</label>
-                <input type="number" name="cep" id="cep" placeholder="Digite seu cep">
+                <input type="text" name="cep" id="cep" placeholder="Digite seu cep">
             </div>
-    
+
             <div class="campo">
                 <label for="endereço">Endereço</label>
-                <input type="text" name="endereço" id="endereço" placeholder="Digite seu endereço">
+                <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço">
             </div>
-    
-    
-    
+
             <div class="campo">
                 <label for="numero">Número</label>
-                <input type="number" name="numero" id="senha" placeholder="Digite seu ´numero">
+                <input type="text" name="numero" id="numero" placeholder="Digite seu número">
             </div>
-    
+
             <div class="campo">
                 <label for="complemento">Complemento</label>
-                <input type="number" name="complemento"  id="conf_senha" placeholder="Digite o complemento">
+                <input type="text" name="complemento"  id="complemento" placeholder="Digite o complemento">
             </div>
-    
-    
-    
-        <input type="button" value="Finalizar" id="botao">
-    
-        <p id="resposta"></p>
-    
-    </form>
-</main>
-<br>
-<br>
-<footer>
-      
-    <div id="div_icones">
-        <img src="../img/icone_face.png" class="icone" width="30px">
-        <img src="../img/icone_email.png" class="icone" width="30px">
-        <img src="../img/icone_yt.png" class="icone" width="30px">
-        <img src="../img/icone_tel.png" class="icone" width="30px">
-    </div>
-    <p class="footer_info">Avenida Santos Dumont 789 - Jardins</p>
-    <p class="footer_info">faleconosco@synergyfit.com</p>
-    <nav>
-        <a href="#" class="footer_info">Sobre Nós</a>
-        <a href="#" class="footer_info">Fale Conosco</a>
-    </nav>
-  
-</footer>
 
+
+
+            <input type="button" value="Finalizar" id="botao">
+
+            <p id="resultado"></p>
+
+        </form>
+    </main>
+
+    <footer id="footer">
+        
+        <div id="div_icones">
+            <img src="../img/icone_face.png" class="icone" width="30px">
+            <img src="../img/icone_email.png" class="icone" width="30px">
+            <img src="../img/icone_yt.png" class="icone" width="30px">
+            <img src="../img/icone_tel.png" class="icone" width="30px">
+        </div>
+        <p class="footer_info">Avenida Santos Dumont 789 - Jardins</p>
+        <p class="footer_info">faleconosco@synergyfit.com</p>
+  
+    </footer>
+
+    <script src="../script/endereco.js"></script>
 
 </body>
 </html>

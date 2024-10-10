@@ -29,7 +29,7 @@ async function login() {
         localStorage.setItem('user', JSON.stringify(resposta))
         console.log(resposta)
 
-        resultado.innerHTML = 'Logado com sucesso'
+        resultado.innerHTML = 'Logado com sucesso :)'
         resultado.style.color = 'green'
 
         setTimeout(() => window.location.href = 'home.html', 3000);
@@ -42,4 +42,29 @@ async function login() {
     resultado.style.color = 'red'
 }
 
+function deslogar() {
+
+    localStorage.clear()
+    document.getElementById('deslogar').innerHTML = 'Deslogado com sucesso!'
+    setTimeout(() => window.location.href = 'login.html', 2000);
+}
+
 document.getElementById('botao').addEventListener('click', login)
+document.getElementById('deslogar').addEventListener('click', deslogar)
+
+try {
+    let dados = JSON.parse(localStorage.user);
+    if(dados) {
+        document.getElementById('deslogar').style.display = 'block'
+        document.getElementById('titulo').innerHTML = `Olá, ${dados.user.name}!`
+        document.getElementById('login').style.display = 'none'
+        document.getElementById('form').style.display = 'none'
+        document.getElementById('informacoes_logado').style.display = 'block'
+        document.getElementById('info_email').innerHTML = dados.user.email
+        document.getElementById('info_cpf').innerHTML = dados.user.cpf_cnpj
+        document.getElementById('info_data').innerHTML = dados.user.birthday
+    }
+} catch {
+    document.getElementById('titulo').innerHTML = "Area de login"
+    document.getElementById('deslogar').style.display = 'none'
+}
