@@ -13,6 +13,9 @@ async function cadastro() {
 
     // Exemplo de como usar os valores obtidos
     let resposta = document.getElementById('resposta');
+
+    resposta.style.color = 'black'
+    resposta.innerHTML = 'processando...'
     
     // Verifica se todos os campos estão preenchidos
     if (!nome || !email || !cpfCnpj || !dataNascimento || !senha || !confirmarSenha) {
@@ -71,8 +74,9 @@ async function cadastro() {
 
     if (api.ok) {
         resposta.style.color = 'green'
-        resposta.textContent = "Cadastro realizado com sucesso!";
+        resposta.innerHTML = "Cadastro realizado com sucesso!<br>Ative sua conta pelo email recebido!";
         console.log(`Cadastrado com sucesso: ${nome}`)
+        setTimeout(() => window.location.href = 'home.html', 3000);
         return; 
     } 
 

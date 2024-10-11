@@ -6,6 +6,8 @@ async function login() {
     let senha = document.getElementById('senha').value
     let resultado = document.getElementById('resposta')
 
+    resultado.innerHTML = 'Processando...'
+
     if (!email || !senha) {
         resultado.innerHTML = 'Campos obrigatórios!'
         resultado.style.color = 'red'

@@ -146,6 +146,26 @@ footer > nav > a {
     text-align: center;
 }
 
+/*endereço já cadastrado*/
+#div_endereco_cadastrado {
+    padding: 20px 0px;
+    text-align: center;
+    margin: 0px auto 35px auto;
+    background-color: #f7f7f7;
+    box-shadow: 2px 4px 3px #adadad7a;
+    border-radius: 10%;
+}
+
+#div_endereco_cadastrado > h1 {
+    color: #3b096d;
+    text-shadow: 0.6px 0.7px 1px #d3a7ff;
+}
+
+.paragrafo_endereco {
+    color: #643494;
+    font-family: monospace;
+}
+
 /*Celular*/
 @media(min-width:320px) and (max-width:500px) {
     form {
@@ -170,6 +190,12 @@ footer > nav > a {
     }
     .paragrafos {
         font-size: 1.2em;
+    }
+    #div_endereco_cadastrado {
+        width: 70%;
+    }
+    .paragrafo_endereco {
+        font-size: 1.5em;
     }
 }
 
@@ -198,6 +224,12 @@ footer > nav > a {
     .paragrafos {
         font-size: 1.3em;
     }
+    #div_endereco_cadastrado {
+        width: 60%;
+    }
+    .paragrafo_endereco {
+        font-size: 1.6em;
+    }
 }
 
 /*Desktop menor*/
@@ -224,6 +256,12 @@ footer > nav > a {
     }
     .paragrafos {
         font-size: 1.5em;
+    }
+    #div_endereco_cadastrado {
+        width: 50%;
+    }
+    .paragrafo_endereco {
+        font-size: 1.8em;
     }
 }
 
@@ -253,5 +291,10 @@ footer > nav > a {
     .paragrafos {
         font-size: 1.6em;
     }
-    
+    #div_endereco_cadastrado {
+        width: 45%;
+    }
+    .paragrafo_endereco {
+        font-size: 2em;
+    }
 }

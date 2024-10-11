@@ -1,12 +1,39 @@
 try {
     let dados = JSON.parse(localStorage.user);
     if(dados) {
-        document.getElementById('form').style.display = 'flex'
-        document.getElementById('deslogado').style.display = 'none'
-        document.getElementById('paragrafo').innerHTML = `Olá ${dados.user.name}!<br>Agora, faça seu cadastro de endereço!`
-        document.getElementById('paragrafo_2').style.display = 'none'
+        
+        try {
+            let dados_endereco = JSON.parse(localStorage.endereco)
+
+            if(dados_endereco) {
+                document.getElementById('form').style.display = 'none'
+                document.getElementById('deslogado').style.display = 'none'
+                document.getElementById('div_endereco_cadastrado').style.display = 'block'
+
+                document.getElementById('campo_titulo').innerHTML = dados_endereco.data.title
+
+                document.getElementById('campo_rua').innerHTML = dados_endereco.data.address
+
+                document.getElementById('campo_numero').innerHTML = dados_endereco.data.number
+
+                document.getElementById('campo_cep').innerHTML = dados_endereco.data.cep
+
+                document.getElementById('campo_complemento').innerHTML = dados_endereco.data.complement
+
+            }
+
+        } catch {
+            document.getElementById('div_endereco_cadastrado').style.display = 'none'
+            document.getElementById('form').style.display = 'flex'
+            document.getElementById('deslogado').style.display = 'none'
+            document.getElementById('paragrafo').innerHTML = `Olá ${dados.user.name}!<br>Agora, faça seu cadastro de endereço!`
+            document.getElementById('paragrafo_2').style.display = 'none'
+        }
+
     }
+
 } catch {
+    document.getElementById('div_endereco_cadastrado').style.display = 'none'
     document.getElementById('form').style.display = 'none'
     document.getElementById('deslogado').style.display = 'block'
     document.getElementById('paragrafo').innerHTML = 'Apenas clientes podem cadastrar endereço'
@@ -26,6 +53,9 @@ async function cadastroEndereco() {
     let endereco = document.getElementById('endereco').value
     let numero = document.getElementById('numero').value
     let complemento = document.getElementById('complemento').value
+
+    resultado.innerHTML = `Processando...`
+    resultado.style.color = 'black'
 
     if (!titulo || !cep || !endereco || !numero || !complemento) {
         resultado.innerHTML = 'Preencha todos os campos!'

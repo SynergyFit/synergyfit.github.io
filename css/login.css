@@ -138,7 +138,7 @@ input[type='checkbox'] {
     border-radius: 8px;
 }
 #botao:hover {
-    background-color: #AFA4BA;
+    background-color: #643494;
     transition: 0.3s;
     transform: translateY(-4px);
     box-shadow: 2px 2px 3px rgb(110, 110, 110);
