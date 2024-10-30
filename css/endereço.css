@@ -58,6 +58,7 @@ span{
 }
 
 form {
+    display: flex;
     flex-direction: column;
     margin: 20px auto 40px auto;   
     box-shadow: 0px 1px 2px black;
@@ -153,7 +154,6 @@ footer > nav > a {
     margin: 0px auto 35px auto;
     background-color: #f7f7f7;
     box-shadow: 2px 4px 3px #adadad7a;
-    border-radius: 10%;
 }
 
 #div_endereco_cadastrado > h1 {
@@ -161,9 +161,16 @@ footer > nav > a {
     text-shadow: 0.6px 0.7px 1px #d3a7ff;
 }
 
-.paragrafo_endereco {
-    color: #643494;
-    font-family: monospace;
+.endereco {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.endereco:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
 }
 
 /*Celular*/

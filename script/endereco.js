@@ -1,45 +1,57 @@
-try {
-    let dados = JSON.parse(localStorage.user);
-    if(dados) {
-        
-        try {
-            let dados_endereco = JSON.parse(localStorage.endereco)
 
-            if(dados_endereco) {
-                document.getElementById('form').style.display = 'none'
-                document.getElementById('deslogado').style.display = 'none'
-                document.getElementById('div_endereco_cadastrado').style.display = 'block'
 
-                document.getElementById('campo_titulo').innerHTML = dados_endereco.data.title
 
-                document.getElementById('campo_rua').innerHTML = dados_endereco.data.address
+async function lista_endereco() {
 
-                document.getElementById('campo_numero').innerHTML = dados_endereco.data.number
+    document.getElementById('enderecos_cadastrados').innerHTML = 'Processando...' 
 
-                document.getElementById('campo_cep').innerHTML = dados_endereco.data.cep
+    let user = JSON.parse(localStorage.getItem('user'))
 
-                document.getElementById('campo_complemento').innerHTML = dados_endereco.data.complement
+    let url_listagem = 'https://go-wash-api.onrender.com/api/auth/address'
 
-            }
+    let api_listagem = await fetch(url_listagem, {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${user.access_token}`
+        }
+    });
 
-        } catch {
-            document.getElementById('div_endereco_cadastrado').style.display = 'none'
-            document.getElementById('form').style.display = 'flex'
-            document.getElementById('deslogado').style.display = 'none'
-            document.getElementById('paragrafo').innerHTML = `Olá ${dados.user.name}!<br>Agora, faça seu cadastro de endereço!`
-            document.getElementById('paragrafo_2').style.display = 'none'
+
+    if (api_listagem.ok) {
+        let resposta = await api_listagem.json();
+        console.log(resposta.data)
+
+        if(resposta.data.length == 0) {
+            document.getElementById('enderecos_cadastrados').innerHTML = 'Nenhum endereço cadastrado'
+        } else {
+            document.getElementById('enderecos_cadastrados').innerHTML = 'Seus endereços' 
         }
 
-    }
+        const listaEnderecosDiv = document.getElementById('lista-enderecos');
 
-} catch {
-    document.getElementById('div_endereco_cadastrado').style.display = 'none'
-    document.getElementById('form').style.display = 'none'
-    document.getElementById('deslogado').style.display = 'block'
-    document.getElementById('paragrafo').innerHTML = 'Apenas clientes podem cadastrar endereço'
-    document.getElementById('paragrafo_2').display = 'block'
-    document.getElementById('paragrafo_2').innerHTML = 'Se você ja for aluno, <span><a href="login.html">faça seu login!</a></span>'
+        // Percorrer cada endereço e criar uma div
+        resposta.data.forEach(endereco => {
+            const enderecoDiv = document.createElement('div');
+            enderecoDiv.className = 'endereco';
+            enderecoDiv.innerHTML = `
+                <h2>${endereco.title}</h2>
+                <p><strong>Endereço:</strong> ${endereco.formatted_address}</p>
+                <p><strong>CEP:</strong> ${endereco.cep}</p>
+                <p><strong>Número:</strong> ${endereco.number}</p>
+                <p><strong>Complemento:</strong> ${endereco.complement}</p>
+            `;
+            listaEnderecosDiv.appendChild(enderecoDiv);
+        });
+
+        return
+
+    }
 }
+
+lista_endereco()
+
+//testes acima//
 
 const url = 'https://go-wash-api.onrender.com/api/auth/address'
 
@@ -57,8 +69,8 @@ async function cadastroEndereco() {
     resultado.innerHTML = `Processando...`
     resultado.style.color = 'black'
 
-    if (!titulo || !cep || !endereco || !numero || !complemento) {
-        resultado.innerHTML = 'Preencha todos os campos!'
+    if (!titulo || !cep || !endereco || !numero) {
+        resultado.innerHTML = 'Preencha os campos!'
         resultado.style.color = 'red'
         return
     }
@@ -85,7 +97,6 @@ async function cadastroEndereco() {
         resultado.innerHTML = 'Endereço cadastrado :)'
         resultado.style.color = 'green'
         console.log(resposta)
-        localStorage.setItem('endereco', JSON.stringify(resposta))
         setTimeout(() => window.location.href = 'home.html', 3000)
         return
     }
@@ -95,3 +106,14 @@ async function cadastroEndereco() {
 }
 
 document.getElementById('botao').addEventListener('click', cadastroEndereco)
+
+/*Consifurações das divs que irão aparecer*/
+const user = JSON.parse(localStorage.getItem('user'));
+
+if (user) {
+    document.getElementById('deslogado').style.display = 'none';
+} else {
+    document.getElementById('deslogado').style.display = 'block';
+    document.getElementById('cadastro_endereco').style.display = 'none';
+    document.getElementById('div_endereco_cadastrado').style.display = 'none';
+}
