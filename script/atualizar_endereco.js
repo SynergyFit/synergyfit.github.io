@@ -18,8 +18,8 @@ async function atualizar_endereco() {
 
     let user = JSON.parse(localStorage.getItem('user'))
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get('id');
+    const url_parametro = new URLSearchParams(window.location.search);
+    const id = url_parametro.get('id');
     
     let url = `https://go-wash-api.onrender.com/api/auth/address/${id}`
 
