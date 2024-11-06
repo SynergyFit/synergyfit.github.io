@@ -147,7 +147,16 @@ footer > nav > a {
     text-align: center;
 }
 
+#cadastro_endereco {
+    display: none;
+}
+
+#div_endereco_cadastrado {
+    display: none;
+}
+
 /*endereço já cadastrado*/
+
 #div_endereco_cadastrado {
     padding: 20px 0px;
     text-align: center;
@@ -189,11 +198,6 @@ footer > nav > a {
     border-color: #aa55ff;
     box-shadow: none;
     transform: translateY(0px);
-}
-
-#resultado {
-    font-size: 1.2em;
-    text-align: center;
 }
 
 /*Celular*/

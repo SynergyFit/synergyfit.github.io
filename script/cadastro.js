@@ -81,8 +81,6 @@ async function cadastro() {
     } 
 
     let respostaErro = await api.json();
-
-
     console.log(respostaErro)
 
     if(respostaErro.data.errors == 'cpf_cnpj invalid') {

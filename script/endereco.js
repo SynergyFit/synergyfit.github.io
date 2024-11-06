@@ -7,6 +7,8 @@ document.getElementById('paragrafo_cadastre').innerHTML = `Olá, ${user.user.nam
 
 if (user) {
     document.getElementById('deslogado').style.display = 'none';
+    document.getElementById('cadastro_endereco').style.display = 'block';
+    document.getElementById('div_endereco_cadastrado').style.display = 'block';
 } else {
     document.getElementById('deslogado').style.display = 'block';
     document.getElementById('cadastro_endereco').style.display = 'none';
