@@ -72,18 +72,11 @@ form {
 
 }
 
-
 label {
     display: block;
 
 }
-#label_check {
-    display: inline;
-}
-input[type='checkbox'] {
-    position: relative;
-    bottom: -2px;
-}
+
 #botao {
     color: white;
     background-color: #eb671b;
@@ -140,55 +133,10 @@ footer > nav > a {
 }
 
 .paragrafos {
-    text-align: center;
-}
-
-#resultado {
-    text-align: center;
-}
-
-/*endereço já cadastrado*/
-#div_endereco_cadastrado {
-    padding: 20px 0px;
-    text-align: center;
-    margin: 0px auto 35px auto;
-    background-color: #f7f7f7;
-    box-shadow: 2px 4px 3px #adadad7a;
-}
-
-#div_endereco_cadastrado > h1 {
-    color: #3b096d;
-    text-shadow: 0.6px 0.7px 1px #d3a7ff;
-}
-
-.endereco {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 5px;
-}
-
-.endereco:hover {
-    transition: 0.3s;
-    transform: scale(1.05);
-}
-
-.endereco > input[type="button"] {
-    transition: 0.3s;
-    border-radius: 5px;
-    border: solid 2px #643494;
+    font-size: 1.2em;
     font-family: monospace;
-}
-
-.endereco > input[type="button"]:hover {
-    box-shadow: 1px 3px 3px #0000004b;
-    transform: translateY(-5px);
-}
-
-.endereco > input[type="button"]:active {
-    border-color: #aa55ff;
-    box-shadow: none;
-    transform: translateY(0px);
+    color: #aa55ff;
+    text-align: center;
 }
 
 #resultado {
@@ -220,12 +168,6 @@ footer > nav > a {
     }
     .paragrafos {
         font-size: 1.2em;
-    }
-    #div_endereco_cadastrado {
-        width: 70%;
-    }
-    .paragrafo_endereco {
-        font-size: 1.5em;
     }
 }
 
