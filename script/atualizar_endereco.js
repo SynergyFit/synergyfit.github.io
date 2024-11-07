@@ -84,8 +84,6 @@ async function pegar_endereco() {
                 document.getElementById('paragrafo_endereco_atualizado').innerHTML = `Atualizar ${endereco.title}`
             }
 
-            return id
-
         });
 
         if(resposta.data.length == 0) {
