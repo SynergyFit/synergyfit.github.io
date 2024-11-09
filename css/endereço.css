@@ -182,24 +182,43 @@ footer > nav > a {
     transform: scale(1.05);
 }
 
-.endereco > input[type="button"] {
+#atualizar {
     transition: 0.3s;
     border-radius: 5px;
     border: solid 2px #643494;
     font-family: monospace;
 }
 
-.endereco > input[type="button"]:hover {
+#atualizar:hover {
+    border-color: #8647c5;
     box-shadow: 1px 3px 3px #0000004b;
     transform: translateY(-5px);
 }
 
-.endereco > input[type="button"]:active {
+#atualizar:active {
     border-color: #aa55ff;
     box-shadow: none;
     transform: translateY(0px);
 }
 
+#deletar {
+    transition: 0.3s;
+    border-radius: 5px;
+    border: solid 2px #b84646;
+    font-family: monospace;
+}
+
+#deletar:hover {
+    border-color: #cf4242;
+    box-shadow: 1px 3px 3px #0000004b;
+    transform: translateY(-5px);
+}
+
+#deletar:active {
+    border-color: #ff2c2c;
+    box-shadow: none;
+    transform: translateY(0px);
+}
 /*Celular*/
 @media(min-width:320px) and (max-width:500px) {
     form {

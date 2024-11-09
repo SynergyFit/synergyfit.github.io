@@ -44,11 +44,30 @@ async function login() {
     resultado.style.color = 'red'
 }
 
-function deslogar() {
+async function deslogar() {
 
-    localStorage.clear()
-    document.getElementById('deslogar').innerHTML = 'Deslogado com sucesso!'
-    setTimeout(() => window.location.href = 'login.html', 2000);
+    document.getElementById('deslogar').innerHTML = 'deslogando...'
+
+    let url_deslogar = "https://go-wash-api.onrender.com/api/auth/logout"
+
+    let token = JSON.parse(localStorage.getItem('user')).access_token
+    
+    let api_deslogar = await fetch(url_deslogar, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        }
+    });
+
+    if(api_deslogar.ok) {
+        resposta = await api_deslogar.json();
+        console.log(resposta)
+        localStorage.clear()
+        document.getElementById('deslogar').innerHTML = 'Deslogado com sucesso!'
+        setTimeout(() => window.location.href = 'login.html', 2000);
+        return
+    }
 }
 
 document.getElementById('botao').addEventListener('click', login)

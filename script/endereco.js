@@ -54,7 +54,8 @@ async function lista_endereco() {
                 <p><strong>CEP:</strong> ${endereco.cep}</p>
                 <p><strong>Número:</strong> ${endereco.number}</p>
                 <p><strong>Complemento:</strong> ${endereco.complement}</p>
-                <input type="button" value="Atualizar" onclick="redirecionar_atualizacao_endereco(${endereco.id})">
+                <input id="deletar" type="button" value="Deletar" onclick="deletar_endereco(${endereco.id}, '${endereco.title}')">
+                <input id="atualizar" type="button" value="Atualizar" onclick="redirecionar_atualizacao_endereco(${endereco.id})">
             `;
             listaEnderecosDiv.appendChild(enderecoDiv);
         });
@@ -90,38 +91,71 @@ async function cadastroEndereco() {
         return
     }
 
+    try {
 
-    let api = await fetch(url, {
-        method: "POST",
-        body: JSON.stringify({
-            "title":titulo,
-            "cep": cep,
-            "address": endereco,
-            "number": numero,
-            "complement": complemento
+        let api = await fetch(url, {
+            method: "POST",
+            body: JSON.stringify({
+                "title":titulo,
+                "cep": cep,
+                "address": endereco,
+                "number": numero,
+                "complement": complemento
+            }
+            ),
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${user.access_token}`
+            }
+        });
+    
+        if (api.ok) {
+            let resposta = await api.json();
+            resultado.innerHTML = 'Endereço cadastrado :)'
+            resultado.style.color = 'green'
+            console.log(resposta)
+            setTimeout(() => window.location.href = 'home.html', 3000)
+            return
         }
-        ),
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${user.access_token}`
-        }
-    });
 
-    if (api.ok) {
-        let resposta = await api.json();
-        resultado.innerHTML = 'Endereço cadastrado :)'
-        resultado.style.color = 'green'
-        console.log(resposta)
-        setTimeout(() => window.location.href = 'home.html', 3000)
-        return
+    } catch {
+        resultado.innerHTML = `Não cadastrado :(`
+        resultado.style.color = 'red'
     }
-    let respostaErro = await api.json();
-    resultado.innerHTML = `Não cadastrado :(<br>${respostaErro}`
-    resultado.style.color = 'red'
 }
 
 ////////////////////////////////////////////////////////////////////
 
 function redirecionar_atualizacao_endereco(id) {
     setTimeout(() => window.location.href = `atualizar_endereco.html?id=${id}`, 1000)
+}
+
+/////////////////////////////////////////////////////////////////////
+
+async function deletar_endereco(id, titulo_endereco) {
+
+    let confirm = window.confirm(`Apagar endereço: ${titulo_endereco}?`)
+
+    if(confirm) {
+
+        token = JSON.parse(localStorage.getItem('user')).access_token
+    
+        let url_deletar = `https://go-wash-api.onrender.com/api/auth/address/${id}`
+
+        let api_deletar = await fetch(url_deletar, {
+            method: 'DELETE',
+            headers: {
+                'Authorization':`Bearer ${token}`,
+                'Cookie':'gowash_session=0hGqRHf0q38ETNgEcJGce30LcPtuPKo48uKtb7Oj'
+            }
+        });
+
+        if(api_deletar.ok) {
+            resposta = await api_deletar.json()
+            window.location.href = '../view/endereco.html'
+            return
+        }
+
+    }
+
 }

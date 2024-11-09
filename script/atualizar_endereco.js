@@ -18,8 +18,7 @@ async function atualizar_endereco() {
 
     let user = JSON.parse(localStorage.getItem('user'))
 
-    const url_parametro = new URLSearchParams(window.location.search);
-    const id = url_parametro.get('id');
+    const id = new URLSearchParams(window.location.search).get('id');
     
     let url = `https://go-wash-api.onrender.com/api/auth/address/${id}`
 
@@ -59,15 +58,17 @@ async function atualizar_endereco() {
 
 async function pegar_endereco() { 
 
-    let user = JSON.parse(localStorage.getItem('user'))
+    const id = new URLSearchParams(window.location.search).get('id');
 
-    let url_listagem = 'https://go-wash-api.onrender.com/api/auth/address'
+    let token = JSON.parse(localStorage.getItem('user')).access_token
+
+    let url_listagem = `https://go-wash-api.onrender.com/api/auth/address/${id}` 
 
     let api_listagem = await fetch(url_listagem, {
         method: "GET",
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${user.access_token}`
+            'Authorization': `Bearer ${token}`
         }
     });
 
@@ -75,26 +76,20 @@ async function pegar_endereco() {
     if (api_listagem.ok) {
         let resposta = await api_listagem.json();
 
-        const urlParams = new URLSearchParams(window.location.search);
-        const id = urlParams.get('id');
+        console.log(resposta)
 
-        resposta.data.forEach(endereco => {
-
-            if(endereco.id == id) { 
-                document.getElementById('paragrafo_endereco_atualizado').innerHTML = `Atualizar ${endereco.title}`
-            }
-
-        });
-
-        if(resposta.data.length == 0) {
-            console.log( 'Nenhum endereço cadastrado')
-            return
-        }
+        document.getElementById('titulo').value = resposta.data.title
+        document.getElementById('cep').value = resposta.data.cep
+        document.getElementById('endereco').value = resposta.data.address
+        document.getElementById('numero').value = resposta.data.number
+        document.getElementById('complemento').value = resposta.data.complement
 
     }
     
 }
 
 pegar_endereco()
+
+//////////////////////////////////
 
 document.getElementById('botao').addEventListener('click', atualizar_endereco)
